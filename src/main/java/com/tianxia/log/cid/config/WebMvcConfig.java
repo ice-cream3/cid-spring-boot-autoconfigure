@@ -24,8 +24,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @AutoConfigureAfter(WebMvcConfigurer.class)
 public class WebMvcConfig implements WebMvcConfigurer {
 
-//        @Autowired
-//        private PreventRepeatSubmitInterceptor preventRepeatSubmitInterceptor;
+        //@Autowired
+        //private PreventRepeatSubmitInterceptor preventRepeatSubmitInterceptor;
 
     /*public void addCorsMappings(CorsRegistry registry) {
         //设置允许跨域的路径
@@ -39,8 +39,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }*/
 
     public void addInterceptors(InterceptorRegistry registry) {
-        //.excludePathPatterns("/wechatwork/**")  .addPathPatterns("/order/**")
-        //防重复提交拦截器
+        //.excludePathPatterns("/wechatwork/**").addPathPatterns("/order/**")
+        // ruoyi防重复提交拦截器
         // registry.addInterceptor(preventRepeatSubmitInterceptor);
         //日志拦截器
         registry.addInterceptor(new LogInterceptor()).addPathPatterns("/**");
